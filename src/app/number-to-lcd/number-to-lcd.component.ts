@@ -6,33 +6,21 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./number-to-lcd.component.scss'],
 })
 export class NumberToLcdComponent implements OnInit {
-  _number: number = 123;
+  _number: number = 0;
 
-  /*number to display
-  default 0*/
-  @Input() set number(v: number) {
-    this._number = v;
+  /*number to display default 0*/
+  @Input() set number(n: number) {
+    this._number = n;
     this.showNumberToLcd();
   }
 
-  /*display's background-color
-  default #000 (black) */
+  /*LCD display's background-color #000 (black) */
   @Input() backgroundColor: string = '#000';
 
-  /*digit width
-  default 20px*/
-  @Input() width: string = '20px';
-
-  /*digit height
-  default 40px*/
-  @Input() height: string = '40px';
-
-  /* active lines color
-  default rgb(243, 0, 0) (bright-green) */
+  /* LCD numbers active lines color (light-green) */
   @Input() activeColor: string = '#00994d';
 
-  /* disabled lines color
-  default rgb(60, 0, 0) (dark-green) */
+  /* LCD numbers disabled lines color (dark-green) */
   @Input() disabledColor: string = '#003300';
 
   //regEpx for displaying numbers
