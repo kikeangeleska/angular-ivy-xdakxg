@@ -1,11 +1,11 @@
 <div
   class="counter"
   [style.background-color]="backgroundColor"
-  [style.height.px]="50"
+  [style.height]="height"
 >
   <div
     class="number"
-    [style.width.px]="30"
+    [style.width]="width"
     *ngFor="let char of displayValue.split('')"
   >
     <div class="number-box">

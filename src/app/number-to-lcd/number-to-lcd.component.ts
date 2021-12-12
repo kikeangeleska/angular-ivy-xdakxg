@@ -14,6 +14,12 @@ export class NumberToLcdComponent implements OnInit {
     this.showNumberToLcd();
   }
 
+  /*LCD number width - default 30px*/
+  @Input() width: string = '30px';
+
+  /*LCD number height default 50px*/
+  @Input() height: string = '50px';
+
   /*LCD display's background-color #000 (black) */
   @Input() backgroundColor: string = '#000';
 
